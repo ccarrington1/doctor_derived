@@ -10,7 +10,7 @@ using namespace std;
 int main()
 
 {
-	patientType newPatient;
+	patientType newPatient("Charles", "Carrington", "BL777", 34, 0, "Illidan", "Stormrage", 0, 0);
 	billType bill;
 
 	string str1, str2, str3;
