@@ -11,15 +11,22 @@ class doctorType : public personType
 {
 public:
 	void print() const;
-	void setSpeciality(string spl);
+
+	void setDoctorSpec(string spl);
 	string getSpecialty();
+
+	void setDoctorFName(string first);
+	string getDoctorFName();
+
+	void setDoctorLName(string last);
+	string getDoctorLName();
 
 	doctorType(string first = "", string last = "", string spl = "");
 
 private: 
 	string specialty;
-
-
+	string doctorLName;
+	string doctorFName;
 };
 
 

@@ -6,7 +6,7 @@ using namespace std;
 
 void personType::print() const
 {
-	cout << firstName << " " << lastName;
+	cout << "Name: " << lastName << ", " << firstName << endl;
 }
 
 void personType::setName(string first, string last)

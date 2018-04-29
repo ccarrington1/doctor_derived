@@ -4,13 +4,21 @@
 
 using namespace std;
 
+
+doctorType::doctorType(string first, string last, string spl) :personType(first, last)
+{
+	doctorFName = first;
+	doctorLName = last;
+	specialty = spl;
+}
+
 void doctorType::print() const
 {
 	personType::print();
-	cout << " " << specialty;
+	cout << "Specialty: " << specialty << endl;
 }
 
-void doctorType::setSpeciality(string spl)
+void doctorType::setDoctorSpec(string spl)
 {
 	specialty = spl;
 }
@@ -20,7 +28,23 @@ string doctorType::getSpecialty()
 	return specialty;
 }
 
-doctorType::doctorType(string first, string last, string spl) :personType(first, last)
+void doctorType::setDoctorFName(string first)
 {
-	specialty = spl;
+	doctorFName = first;
+}
+
+string doctorType::getDoctorFName()
+{
+	return doctorFName;
+}
+
+void doctorType::setDoctorLName(string last)
+{
+	doctorLName = last;
+}
+
+
+string doctorType::getDoctorLName()
+{ 
+	return doctorLName;
 }

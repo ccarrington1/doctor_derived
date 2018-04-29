@@ -4,28 +4,22 @@
 
 using namespace std;
 
-patientType::patientType(string first, string last, string PatientID, int Age, string DOB, string doctorFName, string doctorLName, int AdmitDate, int DischargeDate)
+patientType::patientType(string first, string last, string PatientID, int Age, string DOB, string AdmitDate, string DischargeDate)
 {
 	firstName = first;
 	lastName = last;
 	age = Age;
 	dob = DOB;
 	patientID = PatientID;
-	DocFName = doctorFName;
-	DocLName = doctorLName;
 	admitDate = AdmitDate;
 	dischargeDate = DischargeDate;
 }
 
 void patientType::print() const
 {
-	cout << "Patient Info: \n";
-	cout << lastName << ", " << firstName << endl;
-	cout << patientID << endl;
-	cout << age << " / " << dob << endl;
-	cout << admitDate << " / " << dischargeDate << endl;
-	cout << "Doctor Info: \n" << endl;
-	cout << DocFName << " " << DocLName << endl;
+	cout << "Patient Info" << endl;
+	cout << "ID: " << patientID << endl;
+	cout << "Age: " << age << endl;
 }
 
 void patientType::setName(string first, string last)
@@ -65,7 +59,7 @@ int patientType::getAge()
 	return age;
 }
 
-void patientType::setDOB(double DOB)
+void patientType::setDOB(string DOB)
 {
 	dob = DOB;
 }
@@ -75,37 +69,24 @@ string patientType::getDOB()
 	return dob;
 }
 
-void patientType::setDoctorName(string doctorFName, string doctorLName)
-{
-	DocFName = doctorFName;
-	DocLName = doctorLName;
 
+
+void patientType::setAdmitDate(string AdmitDate)
+{
+	admitDate = AdmitDate;
 }
 
-string patientType::getDoctorName()
-{
-	string docFullName;
-	docFullName = DocLName + ", " + DocFName;
-
-	return docFullName;
-}
-
-void patientType::setAdmitDate(int AdmitDateM, int AdmitDateD, int AdmitDateY)
-{
-	admitDate = AdmitDateM + ' ' + AdmitDateD + ' ' + AdmitDateY;
-}
-
-int patientType::getAdmitDate()
+string patientType::getAdmitDate()
 {
 	return admitDate;
 }
 
-void patientType::setDischargeDate(int DischargeDateM, int DischargeDateD, int DischargeDateY)
+void patientType::setDischargeDate(string DischargeDate)
 {
-	dischargeDate = DischargeDateM + ' ' + DischargeDateD + ' ' + DischargeDateY;
+	dischargeDate = DischargeDate;
 }
 
-int patientType::getDischargeDate()
+string patientType::getDischargeDate()
 {
 	return dischargeDate;
 }

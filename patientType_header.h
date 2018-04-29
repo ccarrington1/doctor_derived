@@ -13,6 +13,7 @@ using namespace std;
 
 class patientType {
 public:
+
 	void print() const;
 
 	void setName(string first, string last);
@@ -25,19 +26,16 @@ public:
 	void setAge(int Age);
 	int getAge();
 
-	void setDOB(double DOB);
+	void setDOB(string DOB);
 	string getDOB();
 
-	void setDoctorName(string doctorFName, string doctorLName);
-	string getDoctorName();
+	void setAdmitDate(string AdmitDate);
+	string getAdmitDate();
 
-	void setAdmitDate(int AdmitDateM, int AdmitDateD, int AdmitDateY);
-	int getAdmitDate();
+	void setDischargeDate(string DischargeDate);
+	string getDischargeDate();
 
-	void setDischargeDate(int DischargeDateM, int DischargeDateD, int DischargeDateY);
-	int getDischargeDate();
-
-	patientType(string first, string last, string PatientID, int Age, string DOB, string doctorFName, string doctorLName, int AdmitDate, int DischargeDate);
+	patientType(string first, string last, string PatientID, int Age, string DOB, string AdmitDate, string DischargeDate);
 
 
 private:
@@ -46,10 +44,9 @@ private:
 	int age;
 	string dob;
 	string patientID;
-	string DocFName;
-	string DocLName;
-	int admitDate;
-	int dischargeDate;
+	string admitDate;
+	string dischargeDate;
+
 };
 
 
